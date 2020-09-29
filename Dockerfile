@@ -18,7 +18,7 @@ RUN apt install git libgtk2.0-dev -y
 RUN apt install ffmpeg -y
 RUN pip install --upgrade pip
 
-RUN pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip install torch==1.6.0+${CUDA} torchvision==0.7.0+${CUDA} -f https://download.pytorch.org/whl/torch_stable.html
 RUN pip install torch-scatter==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
 RUN pip install torch-sparse==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
 RUN pip install torch-cluster==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
